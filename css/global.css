@@ -67,7 +67,7 @@ main:focus {
 .skip-link {
   display: inline-block;
   padding: 0.7rem 1rem 0.5rem 1rem;
-  background: var(--color-light);
+  background:white;
   color: var(--color-primary-shade);
   text-decoration: none;
   font-weight: 700;
@@ -108,7 +108,7 @@ main:focus {
 
 .site-head {
   padding: 0.6rem 0;
-  background: var(--color-light);
+  background: white;
   border-bottom: 5px solid var(--color-primary);
   border-bottom: 5px solid var(--color-primary-shade);
   color: var(--color-light);
@@ -264,7 +264,7 @@ main:focus {
 
 
 section {
-  height: 100vh;
+  height: 60vh;
   display: flex;
   font-size: 2rem;
 }
@@ -272,8 +272,12 @@ section {
 .trigger-element {
   position: relative;
   overflow: hidden;
-  height: 800px;
-  font-size: 1rem;
+  padding:2rem;
+}
+
+.trigger-element h1{
+  font-size: 10rem;
+  margin-left:10rem;
 }
 
 .bug {
@@ -309,6 +313,11 @@ svg {
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .trigger-element h1{
+    font-size: 5rem;
+    margin-left:5rem;
   }
 }
 

@@ -22,7 +22,7 @@ var tween = gsap.to(".bug", {
 // ScrollMagic - Controlling the animation from scroll
 var controller = new ScrollMagic.Controller();
 var scene = new ScrollMagic.Scene({
-  duration: 8000, // or window.innerHeight
+  duration: 2000, // or window.innerHeight
   triggerElement: ".trigger-element",
   triggerHook: 0
 })
