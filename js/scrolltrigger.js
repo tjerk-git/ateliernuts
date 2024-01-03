@@ -4,25 +4,37 @@ var tween = gsap.to(".bug", {
   ease: "sine.out",
   motionPath: {
     curviness: 1.75,
-    autoRotate: true,
+    autoRotate: false,
     alignOrigin: [0.5, 0.5],
     path: [
-      { x: 100, y: -20 },
-      { x: 350, y: 20 },
-      { x: 500, y: -20 },
-      { x: 400, y: 50 },
-      { x: 500, y: -50 },
-      { x: 700, y: -10 },
-      { x: 900, y: 50 },
-      { x: window.innerWidth, y: 100 }
+      { x: 100, y: 20 },
+      { x: 110, y: 20 },
+      { x: 120, y: 19 },
+      { x: 150, y: 17 },
+      { x: 190, y: 16 },
+      { x: 500, y: 15 },
+      { x: 800, y: 14 },
+      { x: window.innerWidth, y: 20 }
     ]
+  },
+  onUpdate: function () {
+    // Get the current scroll position using window.scrollY
+    var scrollPos = window.scrollY;
+
+    if (scrollPos >= 300) {
+      document.querySelector('.snail').classList.remove('hidden');
+    } else {
+      document.querySelector('.snail').classList.add('hidden');
+    }
+
   }
 });
+
 
 // ScrollMagic - Controlling the animation from scroll
 var controller = new ScrollMagic.Controller();
 var scene = new ScrollMagic.Scene({
-  duration: 2000, // or window.innerHeight
+  duration: 1000, // or window.innerHeight
   triggerElement: ".trigger-element",
   triggerHook: 0
 })
@@ -30,3 +42,4 @@ var scene = new ScrollMagic.Scene({
   .setPin(".trigger-element")
   .addTo(controller);
 
+console.log(window.scrollY);
