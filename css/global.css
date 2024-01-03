@@ -244,6 +244,7 @@ main:focus {
 
 section {
   font-size: 2rem;
+  margin-top:4rem;
 }
 
 .trigger-element {
