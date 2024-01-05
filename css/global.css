@@ -9,6 +9,7 @@ html {
   font-size: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {
@@ -288,12 +289,8 @@ section {
   top: 200px;
   left: 0%;
   display: flex;
-  transition: all 350ms ease-in-out;
 }
 
-.snail {
-  transition: all 350ms ease-in-out;
-}
 
 .hidden {
   display: none;
@@ -365,4 +362,17 @@ footer {
     0%{background-position:0% 88%}
     50%{background-position:100% 13%}
     100%{background-position:0% 88%}
+}
+
+.cursor {
+	position: fixed;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	background-color: #f5f5f5;
+	pointer-events: none;
+	mix-blend-mode: difference;
+	z-index: 999;
+
+	transition: transform 0.2s;
 }
