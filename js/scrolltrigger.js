@@ -42,4 +42,3 @@ var scene = new ScrollMagic.Scene({
   .setPin(".trigger-element")
   .addTo(controller);
 
-console.log(window.scrollY);
