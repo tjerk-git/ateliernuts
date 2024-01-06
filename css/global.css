@@ -20,6 +20,10 @@ body {
   font-weight: 400;
 }
 
+.swiper {
+  width: 600px;
+  height: 300px;
+}
 
 .column {
   background: transparent;
